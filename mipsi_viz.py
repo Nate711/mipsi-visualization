@@ -10,7 +10,7 @@ from meshcat import animation
 if __name__ == "__main__":
 
     # IMPORT MG OUTPUT
-    cols = "t sec, qA deg, qB deg, qA' deg/sec, qB' deg/sec, v m/s, TC N*m, TD N*m, x m, y m"
+    cols = "t sec, qA deg, qB deg, qA' deg/sec, qB' deg/sec, vx m/s, TC N*m, TD N*m, x m, y m"
 
     df = pd.read_csv('ODE.1', delim_whitespace=True, header=None, skiprows=4)
     cols = [c.strip() for c in cols.split(",")]
