@@ -16,15 +16,6 @@ if __name__ == "__main__":
     cols = [c.strip() for c in cols.split(",")]
     df.columns = cols
 
-    # PLOT Ao PATH POINT
-    pd.options.plotting.backend = "plotly"
-    fig = df.plot.line(x='x m', y='y m', title='Bo Path Point')
-    fig.show()
-
-    # PLOT BODY PITCH
-    fig2 = df.plot.line(x='t sec', y='qB deg', title='B Pitch')
-    fig2.show()
-
     # CREATE NEW VISUALIZER
     vis = meshcat.Visualizer()
 
